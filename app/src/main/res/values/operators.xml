@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="operator_array">
+        <item nr="1">Add</item>
+        <item nr="2">Subtract</item>
+        <item nr="3">Multiply</item>
+        <item nr="4">Divide</item>
+    </string-array>
+</resources>

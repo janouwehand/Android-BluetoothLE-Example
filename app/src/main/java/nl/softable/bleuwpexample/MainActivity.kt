@@ -7,14 +7,14 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.le.ScanResult
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.example.course1.ExampleScanner
-import com.example.course1.ExampleScannerCallback
+import nl.softable.bleuwpexample.bt.ExampleScanner
+import nl.softable.bleuwpexample.bt.ExampleScannerCallback
 import java.util.*
 import kotlin.concurrent.schedule
 

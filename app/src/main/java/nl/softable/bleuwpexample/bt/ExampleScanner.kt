@@ -1,4 +1,4 @@
-package com.example.course1
+package nl.softable.bleuwpexample.bt
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice

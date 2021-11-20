@@ -1,8 +1,7 @@
 package nl.softable.bleuwpexample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import java.util.jar.Attributes
+import androidx.appcompat.app.AppCompatActivity
 
 class CalculatorActivity : AppCompatActivity() {
 
@@ -19,4 +18,6 @@ class CalculatorActivity : AppCompatActivity() {
         deviceAddress = intent.getStringExtra(DEVICEADDRESS)!!
         title = deviceAddress
     }
+
+
 }
