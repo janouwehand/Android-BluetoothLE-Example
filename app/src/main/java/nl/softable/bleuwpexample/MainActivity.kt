@@ -1,9 +1,11 @@
 package nl.softable.bleuwpexample
 
 import android.Manifest
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.le.ScanResult
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,9 +18,17 @@ import com.example.course1.ExampleScannerCallback
 import java.util.*
 import kotlin.concurrent.schedule
 
+
 class MainActivity : AppCompatActivity() {
 
     private fun PackageManager.missingSystemFeature(name: String): Boolean = !hasSystemFeature(name)
+
+    fun gotoCalculator(result: ScanResult) {
+        val intent = Intent(this, CalculatorActivity::class.java).apply {
+            putExtra(CalculatorActivity.DEVICEADDRESS, result.device.address)
+        }
+        startActivity(intent)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,15 +74,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     var progress: ProgressDialog? = null
+    var act = this
 
     private var callback = object : ExampleScannerCallback() {
 
         override fun onMatch(result: ScanResult) {
             closeProgress()
+            gotoCalculator(result)
         }
 
         override fun onNoMatch() {
             closeProgress()
+
+            AlertDialog.Builder(act)
+                .setTitle("Not found")
+                .setMessage("The remote service could not be found. Make sure both devices are in range of each other.")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.ok) { dialog, which -> }
+                .show()
         }
 
         fun closeProgress() {
