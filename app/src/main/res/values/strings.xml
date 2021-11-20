@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BLE-client-for-UWP-BLE-example</string>
+    <string name="ble_not_supported">Your device does not support Bluetooth Low Energy</string>
 </resources>
