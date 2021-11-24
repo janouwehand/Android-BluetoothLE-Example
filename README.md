@@ -2,6 +2,10 @@
 
 Android Studio Kotlin example project that acts as a client to Microsoft's Universal Windows Platform (UWP) BluetoothLE example.
 
+### Limitations
+
+This example project demonstrates the scanning for service uuids and the reading and writing of BLE characteristics. It does not subscribe to charactiristics to listen for value change events.
+
 
 ### Requirements
 
@@ -46,4 +50,9 @@ Android Studio Kotlin example project that acts as a client to Microsoft's Unive
 <br /><br />
 
 <img src="img/6.jpg" style="max-width: 500px;" width="500" />
+<br /><br />
+
+- The server application:
+
+<img src="img/server_result.png" style="max-width: 800px;" width="800" />
 <br /><br />
