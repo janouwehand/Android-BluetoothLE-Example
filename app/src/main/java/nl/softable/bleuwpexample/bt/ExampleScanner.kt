@@ -13,8 +13,8 @@ import nl.softable.bleuwpexample.Constants
 
 class ExampleScanner(
   bluetoothAdapter: BluetoothAdapter,
-  val serviceUUID: String,
-  val callback: ExampleScannerCallback
+  private val serviceUUID: String,
+  private val callback: ExampleScannerCallback
 )
 {
   private val bluetoothLeScanner = bluetoothAdapter.bluetoothLeScanner
